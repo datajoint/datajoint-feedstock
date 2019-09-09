@@ -29,7 +29,10 @@ requirements:
     - tqdm
     - pandas
     - pydot
-    - matplotlib
+    - matplotlib-base
+    - graphviz
+    - mscorefonts
+    - pyttk
 
 test:
   imports:
