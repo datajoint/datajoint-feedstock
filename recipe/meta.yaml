@@ -39,7 +39,7 @@ test:
     - datajoint
   commands:
     # check that erd drawing is supported
-    - python -c 'import datajoint; assert datajoint.erd.erd_active'
+    - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
 
 about:
   home: https://datajoint.io
