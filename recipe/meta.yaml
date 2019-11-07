@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.11.3" %}
+{% set version = "0.12.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 07b763eafdd02c9851c7d585fe91944165e6f7ab63cb0ca6cadb879776543b5b
+  sha256: 679d5762715c5e99cc70112e53d035e62f8a71de374ae5622f27ad5bb91567c2
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: "{{ PYTHON }} -m pip install . --no-deps -vv"
 
 requirements:
@@ -39,7 +39,7 @@ test:
     - datajoint
   commands:
     # check that erd drawing is supported
-    - python -c 'import datajoint; assert datajoint.erd.erd_active'
+    - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
 
 about:
   home: https://datajoint.io
