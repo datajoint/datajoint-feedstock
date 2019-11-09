@@ -16,10 +16,10 @@ build:
 
 requirements:
   host:
-    - python >=3.4
+    - python >=3.5
     - pip
   run:
-    - python >=3.4
+    - python >=3.5
     - minio
     - pyparsing
     - networkx
@@ -60,3 +60,6 @@ extra:
   recipe-maintainers:
     - tjd2002
     - guzman-raphael
+    - eywalker
+    - dimitri-yatsenko
+    - ixcat
