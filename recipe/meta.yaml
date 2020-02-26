@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.12.4" %}
+{% set version = "0.12.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: be24971f855321c275bb80931ac667e60c6b0fe70687e2d57855ef7c1dfa3b85
+  sha256: 5dbf0384fe1e767077f41428f2d3547d166637716ba1faed688752eec836253c
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
 
 requirements:
   host:
@@ -46,7 +46,7 @@ about:
   license: LGPL-2.1
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: 'A relational data framework for scientific data pipelines with MySQL backend.'
+  summary: A relational data framework for scientific data pipelines with MySQL backend.
 
   description: |
     DataJoint for Python is a high-level programming interface for relational databases
