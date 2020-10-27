@@ -5,9 +5,13 @@ Home: https://datajoint.io
 
 Package license: LGPL-2.1
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/datajoint-feedstock/blob/master/LICENSE.txt)
 
 Summary: A relational data framework for scientific data pipelines with MySQL backend.
+
+Development: https://github.com/datajoint/datajoint-python
+
+Documentation: https://docs.datajoint.io
 
 DataJoint for Python is a high-level programming interface for relational databases
 designed to support data processing chains in science labs. DataJoint is built on the
@@ -124,5 +128,4 @@ Feedstock Maintainers
 * [@eywalker](https://github.com/eywalker/)
 * [@guzman-raphael](https://github.com/guzman-raphael/)
 * [@ixcat](https://github.com/ixcat/)
-* [@tjd2002](https://github.com/tjd2002/)
 
