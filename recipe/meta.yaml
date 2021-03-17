@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.12.8" %}
+{% set version = "0.12.9" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2e6068915f840ee0375cc166cdb4266aeeef1ad714c6cea81340a8a5f7db411d
+  sha256: 6c4ee69f19eb66b81eb0c365dbc9dc05c30d12b2f2b515fb4a8a0b9b33cdacca
 
 build:
   noarch: python
