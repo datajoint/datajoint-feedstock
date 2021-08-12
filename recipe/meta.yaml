@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.12.9" %}
+{% set version = "0.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6c4ee69f19eb66b81eb0c365dbc9dc05c30d12b2f2b515fb4a8a0b9b33cdacca
+  sha256: c45475427614d166590f1a7dc1ee31025369a136683e4651bf9be8a15b132e3e
 
 build:
   noarch: python
@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - otumat
   run:
     - python >=3.5
     - minio
@@ -33,6 +34,8 @@ requirements:
     - graphviz
     - mscorefonts
     - pyttk
+    - cryptography
+    - otumat
 
 test:
   imports:
