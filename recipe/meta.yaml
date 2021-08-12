@@ -33,6 +33,8 @@ requirements:
     - graphviz
     - mscorefonts
     - pyttk
+    - cryptography
+    - otumat
 
 test:
   imports:
