@@ -18,6 +18,7 @@ requirements:
   host:
     - python >=3.5
     - pip
+    - otumat
   run:
     - python >=3.5
     - minio
