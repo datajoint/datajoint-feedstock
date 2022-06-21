@@ -36,6 +36,7 @@ requirements:
     - pyttk
     - cryptography
     - otumat
+    - urllib3
 
 test:
   imports:
@@ -62,6 +63,8 @@ about:
 extra:
   recipe-maintainers:
     - guzman-raphael
-    - eywalker
     - dimitri-yatsenko
-    - ixcat
+    - jverswijver
+    - A-Baji
+    - zitrosolrac
+    - datajointbot
