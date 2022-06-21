@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.13.2" %}
+{% set version = "0.13.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c45475427614d166590f1a7dc1ee31025369a136683e4651bf9be8a15b132e3e
+  sha256: 8cb1d9f049d9875fdda7217cccfd2f185d2b38655e11be833772b7a22e92d507
 
 build:
   noarch: python
@@ -36,6 +36,7 @@ requirements:
     - pyttk
     - cryptography
     - otumat
+    - urllib3
 
 test:
   imports:
@@ -62,6 +63,8 @@ about:
 extra:
   recipe-maintainers:
     - guzman-raphael
-    - eywalker
     - dimitri-yatsenko
-    - ixcat
+    - jverswijver
+    - A-Baji
+    - zitrosolrac
+    - datajointbot
