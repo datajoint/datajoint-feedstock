@@ -153,8 +153,10 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@A-Baji](https://github.com/A-Baji/)
+* [@datajointbot](https://github.com/datajointbot/)
 * [@dimitri-yatsenko](https://github.com/dimitri-yatsenko/)
-* [@eywalker](https://github.com/eywalker/)
 * [@guzman-raphael](https://github.com/guzman-raphael/)
-* [@ixcat](https://github.com/ixcat/)
+* [@jverswijver](https://github.com/jverswijver/)
+* [@zitrosolrac](https://github.com/zitrosolrac/)
 
