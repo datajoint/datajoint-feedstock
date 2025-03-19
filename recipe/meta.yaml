@@ -1,5 +1,5 @@
 {% set name = "datajoint" %}
-{% set version = "0.13.7" %}
+{% set version = "0.14.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 78ce348a7ee36b6626e8e4b6db7ecc91534c45798fdc60968059ebba4fc5192c
+  sha256: 2e55538cacf9f263dc77d1d636d1d14fdeb5531adceeb5b8b9af56c4ec9a4f00
 
 build:
   noarch: python
@@ -16,12 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.8
     - pip
     - otumat
   run:
-    - python >=3.5
-    - minio
+    - python >=3.8
+    - minio >=7.0.0
     - pyparsing
     - networkx
     - pymysql >=0.7.2
@@ -46,18 +46,17 @@ test:
     - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
 
 about:
-  home: https://datajoint.io
+  home: https://datajoint.com
   license: LGPL-2.1
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: A relational data framework for scientific data pipelines with MySQL backend.
+  summary: A relational data framework for scientific data pipelines.
 
   description: |
-    DataJoint for Python is a high-level programming interface for relational databases
-    designed to support data processing chains in science labs. DataJoint is built on the
-    foundation of the relational data model and prescribes a consistent method for
-    organizing, populating, and querying data.
-  doc_url: https://docs.datajoint.io
+    DataJoint for Python is a framework for scientific workflow management based on relational principles.
+    DataJoint is built on the foundation of the relational data model and prescribes a consistent method for
+    organizing, populating, computing, and querying data.
+  doc_url: https://datajoint.com/docs/core/datajoint-python/latest/
   dev_url: https://github.com/datajoint/datajoint-python
 
 extra:
@@ -68,3 +67,4 @@ extra:
     - A-Baji
     - zitrosolrac
     - datajointbot
+    - yambottle
