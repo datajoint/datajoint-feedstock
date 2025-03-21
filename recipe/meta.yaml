@@ -49,6 +49,8 @@ requirements:
     - mscorefonts
 
 test:
+  requires:
+    - python {{ python_version }}
   imports:
     - datajoint
   commands:
@@ -56,6 +58,7 @@ test:
     - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
     # check graphviz is installed
     - dot -V
+    # TODO - add unit test after https://github.com/datajoint/datajoint-python/issues/1211
 
 about:
   home: https://datajoint.com
