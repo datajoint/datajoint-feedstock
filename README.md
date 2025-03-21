@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/datajoint-feeds
 
 Home: https://datajoint.com
 
-Package license: LGPL-2.1
+Package license: LGPL-2.1-only
 
 Summary: A relational data framework for scientific data pipelines.
 
@@ -152,12 +152,9 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@dimitri-yatsenko](https://github.com/dimitri-yatsenko/)
 * [@datajointbot](https://github.com/datajointbot/)
+* [@dimitri-yatsenko](https://github.com/dimitri-yatsenko/)
 * [@guzman-raphael](https://github.com/guzman-raphael/)
-* [@yambottle](https://github.com/yambottle/)
 * [@ttngu207](https://github.com/ttngu207/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@yambottle](https://github.com/yambottle/)
 
