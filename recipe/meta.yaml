@@ -37,6 +37,7 @@ requirements:
     - tqdm
     - pandas
     - pydot
+    # no pyqt included: https://conda-forge.org/docs/maintainer/knowledge_base/#matplotlib
     - matplotlib-base
     - pyttk
     - cryptography
@@ -79,6 +80,7 @@ extra:
   # A maintainer can be added by:
   # - maintainer contributed PR been merged, and this list get updated
   # - open an issue with '@conda-forge-admin, please add user @username' as title
+  # Also a new maintainer needs to accept conda-forge Github org invite email
   recipe-maintainers:
     - guzman-raphael
     - dimitri-yatsenko
