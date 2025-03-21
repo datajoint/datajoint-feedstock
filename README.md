@@ -156,4 +156,5 @@ Feedstock Maintainers
 * [@datajointbot](https://github.com/datajointbot/)
 * [@guzman-raphael](https://github.com/guzman-raphael/)
 * [@yambottle](https://github.com/yambottle/)
+* [@ttngu207](https://github.com/ttngu207/)
 
