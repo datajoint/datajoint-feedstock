@@ -1,14 +1,18 @@
 {% set name = "datajoint" %}
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
+{% set python_version = ">=3.9,<4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 96e116097d509bd29dbf350bce3a6ccd1cc5aef616eeb9c9a82ad3d102fe98fc
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 95e48ca30fdc828d536910cbd331a51971c351cb36eec41f759e1e2e2b078123
 
+# build should be tested locally before PR, please save some resources for the community
+# conda install -n base conda-build boa conda-smithy
+# conda build . or conda mambabuild .
 build:
   noarch: python
   number: 0
@@ -16,12 +20,15 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python {{ python_version }}
     - pip
-    - otumat
+    # for build, conda-forge python 3.13 removed setuptools as default dependency
+    - setuptools
   run:
-    - python >=3.5
-    - minio
+    - python {{ python_version }}
+    # for datajoint plugin dependencies
+    - setuptools
+    - minio >=7.0.0
     - pyparsing
     - networkx
     - pymysql >=0.7.2
@@ -30,41 +37,53 @@ requirements:
     - tqdm
     - pandas
     - pydot
+    # no pyqt included: https://conda-forge.org/docs/maintainer/knowledge_base/#matplotlib
     - matplotlib-base
-    - graphviz
-    - mscorefonts
     - pyttk
     - cryptography
     - otumat
     - urllib3
+    ## System Dependencies
+    # for dj.ERD
+    - graphviz
+    # for matplotlib with Microsoft TrueType
+    - mscorefonts
 
 test:
+  requires:
+    - python {{ python_version }}
   imports:
     - datajoint
   commands:
     # check that erd drawing is supported
     - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
+    # check graphviz is installed
+    - dot -V
+    # TODO - add unit test after https://github.com/datajoint/datajoint-python/issues/1211
 
 about:
-  home: https://datajoint.io
-  license: LGPL-2.1
+  home: https://datajoint.com
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: LICENSE.txt
-  summary: A relational data framework for scientific data pipelines with MySQL backend.
+  summary: A relational data framework for scientific data pipelines.
 
   description: |
-    DataJoint for Python is a high-level programming interface for relational databases
-    designed to support data processing chains in science labs. DataJoint is built on the
-    foundation of the relational data model and prescribes a consistent method for
-    organizing, populating, and querying data.
-  doc_url: https://docs.datajoint.io
+    DataJoint for Python is a framework for scientific workflow management based on relational principles.
+    DataJoint is built on the foundation of the relational data model and prescribes a consistent method for
+    organizing, populating, computing, and querying data.
+  doc_url: https://datajoint.com/docs/core/datajoint-python/latest/
   dev_url: https://github.com/datajoint/datajoint-python
 
 extra:
+  # TL;DR;
+  # A maintainer can be added by:
+  # - maintainer contributed PR been merged, and this list get updated
+  # - open an issue with '@conda-forge-admin, please add user @username' as title
+  # Also a new maintainer needs to accept conda-forge Github org invite email
   recipe-maintainers:
     - guzman-raphael
     - dimitri-yatsenko
-    - jverswijver
-    - A-Baji
-    - zitrosolrac
     - datajointbot
+    - yambottle
+    - ttngu207

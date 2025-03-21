@@ -1,22 +1,21 @@
-About datajoint
-===============
-
-Home: https://datajoint.io
-
-Package license: LGPL-2.1
+About datajoint-feedstock
+=========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/datajoint-feedstock/blob/main/LICENSE.txt)
 
-Summary: A relational data framework for scientific data pipelines with MySQL backend.
+Home: https://datajoint.com
+
+Package license: LGPL-2.1
+
+Summary: A relational data framework for scientific data pipelines.
 
 Development: https://github.com/datajoint/datajoint-python
 
-Documentation: https://docs.datajoint.io
+Documentation: https://datajoint.com/docs/core/datajoint-python/latest/
 
-DataJoint for Python is a high-level programming interface for relational databases
-designed to support data processing chains in science labs. DataJoint is built on the
-foundation of the relational data model and prescribes a consistent method for
-organizing, populating, and querying data.
+DataJoint for Python is a framework for scientific workflow management based on relational principles.
+DataJoint is built on the foundation of the relational data model and prescribes a consistent method for
+organizing, populating, computing, and querying data.
 
 
 Current build status
@@ -105,7 +104,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
@@ -158,5 +157,6 @@ Feedstock Maintainers
 * [@dimitri-yatsenko](https://github.com/dimitri-yatsenko/)
 * [@guzman-raphael](https://github.com/guzman-raphael/)
 * [@jverswijver](https://github.com/jverswijver/)
+* [@yambottle](https://github.com/yambottle/)
 * [@zitrosolrac](https://github.com/zitrosolrac/)
 
