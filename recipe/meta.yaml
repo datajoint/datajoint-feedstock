@@ -1,14 +1,18 @@
 {% set name = "datajoint" %}
 {% set version = "0.14.3" %}
+{% set python_version = ">=3.9,<4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2e55538cacf9f263dc77d1d636d1d14fdeb5531adceeb5b8b9af56c4ec9a4f00
 
+# build should be tested locally before PR, please save some resources for the community
+# conda install -n base conda-build boa conda-smithy
+# conda build . or conda mambabuild .
 build:
   noarch: python
   number: 0
@@ -16,11 +20,14 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_version }}
     - pip
-    - otumat
+    # for build, conda-forge python 3.13 removed setuptools as default dependency
+    - setuptools
   run:
-    - python >=3.8
+    - python {{ python_version }}
+    # for datajoint plugin dependencies
+    - setuptools
     - minio >=7.0.0
     - pyparsing
     - networkx
@@ -31,12 +38,15 @@ requirements:
     - pandas
     - pydot
     - matplotlib-base
-    - graphviz
-    - mscorefonts
     - pyttk
     - cryptography
     - otumat
     - urllib3
+    ## System Dependencies
+    # for dj.ERD
+    - graphviz
+    # for matplotlib with Microsoft TrueType
+    - mscorefonts
 
 test:
   imports:
@@ -44,10 +54,12 @@ test:
   commands:
     # check that erd drawing is supported
     - python -c 'import datajoint as dj; assert dj.diagram.diagram_active'
+    # check graphviz is installed
+    - dot -V
 
 about:
   home: https://datajoint.com
-  license: LGPL-2.1
+  license: LGPL-2.1-only
   license_family: LGPL
   license_file: LICENSE.txt
   summary: A relational data framework for scientific data pipelines.
@@ -60,6 +72,10 @@ about:
   dev_url: https://github.com/datajoint/datajoint-python
 
 extra:
+  # TL;DR;
+  # A maintainer can be added by:
+  # - maintainer contributed PR been merged, and this list get updated
+  # - open an issue with '@conda-forge-admin, please add user @username' as title
   recipe-maintainers:
     - guzman-raphael
     - dimitri-yatsenko
