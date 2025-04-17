@@ -41,7 +41,6 @@ requirements:
     - pydot
     # no pyqt included: https://conda-forge.org/docs/maintainer/knowledge_base/#matplotlib
     - matplotlib-base
-    # - pyttk
     - cryptography
     - otumat
     - urllib3
