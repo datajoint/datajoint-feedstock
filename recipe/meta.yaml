@@ -34,12 +34,13 @@ requirements:
     - pymysql >=0.7.2
     - ipython
     - numpy
+    - deepdiff
     - tqdm
     - pandas
     - pydot
     # no pyqt included: https://conda-forge.org/docs/maintainer/knowledge_base/#matplotlib
     - matplotlib-base
-    - pyttk
+    # - pyttk
     - cryptography
     - otumat
     - urllib3
