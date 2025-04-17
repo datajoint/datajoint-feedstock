@@ -158,6 +158,3 @@ Feedstock Maintainers
 * [@ttngu207](https://github.com/ttngu207/)
 * [@yambottle](https://github.com/yambottle/)
 
-
-<!-- dummy commit to enable rerendering -->
-
