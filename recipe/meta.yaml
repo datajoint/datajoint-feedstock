@@ -1,7 +1,8 @@
 {% set python_version = ">=3.9,<4.0" %}
 {% set python_version = ">=3.9,<4.0" %}
+{% set python_version = ">=3.9,<4.0" %}
 {% set name = "datajoint" %}
-{% set version = "0.14.4" %}
+{% set version = "0.14.5" %}
 {% set python_version = ">=3.9,<4.0" %}
 
 package:
@@ -10,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c9a95904bb80bd6d96c40837d5369cc9664b3f5fc9988365de6ee9ae16ef0684
+  sha256: 78d80a51da0881edfa045910e507955c30bc5e714b105999bfa78f7fb2ad98c5
 
 # build should be tested locally before PR, please save some resources for the community
 # conda install -n base conda-build boa conda-smithy
